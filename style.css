@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
 
 body {
   margin: 0;
@@ -9,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #305f72;
-  height: 60px;
+  height: 70px;
   width: 100%;
   box-shadow: 0 8px 0px #fff6e5;
   margin-bottom: 8px;
@@ -30,60 +31,68 @@ body {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 40px;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
 }
 
 li {
-  display: inline;
+  display: inline-block;
   margin-right: 20px;
 }
 
 a {
-  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-size: 20px;
   color: #f8f5e4;
+}
+
+.navbar-profile-logo {
+  align-items: center;
+  float: right;
+  margin: 0 auto;
+  margin-right: 0px;
+  height: 50px;
+  width: 50px;
+}
+
+.navbar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+}
+.navbar-dropdown .dropdown-content a {
+  color: black;
+}
+
+.navbar-dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .content {
   font-family: "Encode Sans Semi Condensed", sans-serif;
   background-color: rgba(255, 246, 229, 0.4);
   height: 600px;
-  width: 60rem;
+  width: 80rem;
   margin-left: auto;
   border-radius: 20px;
   margin-right: auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 20px;
-}
-
-.entry,
-.authentication {
-  font-family: "Encode Sans Semi Condensed", sans-serif;
-  height: 550px;
-  flex-basis: 53%;
-  border-radius: 10px;
-}
-
-.entry {
-  background-color: #305f72;
-  margin-right: 10px;
-  margin-left: 20px;
-  flex-basis: 40%;
-}
-
-.authentication {
-  background-color: #086e7d;
-  margin-left: 10px;
-  margin-right: 20px;
 }

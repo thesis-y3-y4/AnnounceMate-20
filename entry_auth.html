@@ -1,18 +1,130 @@
-<!-- FILEPATH: /c:/Users/Kc/Desktop/YEAR 3 - CS501/Methods of Research IT2033/Thesis stuff/Website-20%/index.html -->
-<!-- BEGIN: abpxx6d04wxr -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
-    <title>STI AnnounceMate</title>
-  </head>
+    <title>AnnounceMate: Login</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@600;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
 
+      body {
+        margin: 0;
+        background: radial-gradient(circle at 50% 50%, #ffde59, #f1b70a);
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #305f72;
+        height: 60px;
+        width: 100%;
+        box-shadow: 0 8px 0px #fff6e5;
+        margin-bottom: 8px;
+      }
+
+      .navbar-logo {
+        height: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      .navbar-text {
+        font-size: 32px;
+        font-family: "Encode Sans Semi Condensed", sans-serif;
+        color: #f8f5e4;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: 20px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+
+      li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        color: #f8f5e4;
+      }
+
+      .navbar-profile-logo {
+        align-items: center;
+
+        margin-right: 20px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .content {
+        font-family: "Encode Sans Semi Condensed", sans-serif;
+        background-color: rgba(255, 246, 229, 0.4);
+        height: 600px;
+        width: 60rem;
+        margin-left: auto;
+        border-radius: 20px;
+        margin-right: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 60px;
+        padding: 20px;
+      }
+
+      .entry,
+      .authentication {
+        font-family: "Encode Sans Semi Condensed", sans-serif;
+        height: 550px;
+        flex-basis: 53%;
+        border-radius: 10px;
+      }
+
+      .entry {
+        background-color: #305f72;
+        margin-right: 10px;
+        margin-left: 20px;
+        flex-basis: 40%;
+      }
+
+      .authentication {
+        background-color: #086e7d;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
   <body>
     <div class="navbar">
-      <img src="logo.png" alt="Logo" class="navbar-logo" />
+      <img src="Assets/logo.png" alt="Logo" class="navbar-logo" />
       <span class="navbar-text">ANNOUNCEMATE</span>
+      <ul class="navbar-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">CALENDAR</a></li>
+        <li><a href="#">ORGANIZATIONS</a></li>
+        <li><a href="#">DISCUSSIONS</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">ANALYTICS</a></li>
+        <li>
+          <a href="#" class="navbar-profile"
+            ><img
+              src="Assets/profile.png"
+              alt="PROFILE"
+              class="navbar-profile-logo"
+          /></a>
+        </li>
+      </ul>
     </div>
     <div class="content">
       <div class="entry"></div>
