@@ -6,6 +6,7 @@ body {
   background: radial-gradient(circle at 50% 50%, #ffde59, #f1b70a);
 }
 
+/* Navigation Bar */
 .navbar {
   display: flex;
   align-items: center;
@@ -28,7 +29,9 @@ body {
   color: #f8f5e4;
 }
 
-ul {
+.navbar ul {
+  padding: 10px;
+  margin: 0;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -38,7 +41,7 @@ ul {
   position: sticky;
 }
 
-li {
+.navbar li {
   display: inline-block;
   margin-right: 20px;
 }
@@ -47,6 +50,35 @@ a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-size: 20px;
+  color: #f8f5e4;
+  padding: 5px;
+}
+
+/*Still doesn't work, pls help huhu*/
+a:hover:not(.navbar-profile),
+a.hover:not(.navbar-profile-logo) {
+  background: #f8f5e4;
+  color: #305f72;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.5s;
+}
+
+.navbar-profile {
+  align-items: center;
+  margin-left: 40px;
+  text-align: center;
+  padding: 10px 20px;
+  height: auto;
+  width: 100px;
+  background-color: #f8f5e4;
+  border-radius: 50px;
+  color: #305f72;
+  transition: 0.5s;
+}
+
+.navbar-profile:hover {
+  background-color: #f1b70a;
   color: #f8f5e4;
 }
 
@@ -60,8 +92,12 @@ a {
 }
 
 .navbar-dropdown {
-  position: relative;
+  /* position: relative;
   display: inline-block;
+  margin-right: 20px; */
+  display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar-dropdown .dropdown-content {
@@ -76,7 +112,12 @@ a {
   padding: 20px;
 }
 .navbar-dropdown .dropdown-content a {
+  float: none;
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
 .navbar-dropdown:hover .dropdown-content {
@@ -87,11 +128,47 @@ a {
   font-family: "Encode Sans Semi Condensed", sans-serif;
   background-color: rgba(255, 246, 229, 0.4);
   height: 600px;
-  width: 80rem;
+  width: 60rem;
   margin-left: auto;
   border-radius: 20px;
   margin-right: auto;
 
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
   padding: 20px;
+}
+
+.entry,
+.authentication {
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  height: 550px;
+  flex-basis: 53%;
+  border-radius: 10px;
+}
+
+.entry {
+  background-color: #305f72;
+  margin-right: 10px;
+  margin-left: 20px;
+  flex-basis: 40%;
+}
+
+.authentication {
+  background-color: #086e7d;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+/* Calendar style start here*/
+:root {
+  --primary-color: #305f72;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
