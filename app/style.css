@@ -57,18 +57,26 @@ body {
   margin-right: 20px;
 }
 
-a {
+a:not(.navbar-profile-logo) {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-size: 20px;
-  color: #f8f5e4;
   padding: 5px;
 }
+a:not(.navbar-profile-logo):not(.navbar-profile) {
+  color: #f8f5e4;
+}
 
-/*Still doesn't work, pls help huhu*/
-a:hover:not(.navbar-profile),
-a.hover:not(.navbar-profile-logo) {
-  background: #f8f5e4;
+a:active {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+/*Fixed! Thanks Meng*/
+a:hover:not(.navbar-profile-logo):not(.navbar-profile):not(
+    .dropdown-content a
+  ) {
+  background: #f8ede4;
   color: #305f72;
   padding: 5px;
   border-radius: 5px;
@@ -94,9 +102,8 @@ a.hover:not(.navbar-profile-logo) {
 }
 
 .navbar-profile-logo {
-  align-items: center;
   float: right;
-  margin: 0 auto;
+  margin-left: 20px;
   height: 50px;
   width: 50px;
 }
@@ -113,12 +120,12 @@ a.hover:not(.navbar-profile-logo) {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 60%;
   transform: translateX(-50%);
   background-color: #f9f9f9;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 .navbar-dropdown .dropdown-content a {
   float: none;
@@ -133,11 +140,16 @@ a.hover:not(.navbar-profile-logo) {
   display: block;
 }
 
+.dropdown-content a:hover {
+  background-color: #faf3d8;
+  border-radius: 5px;
+}
+
 .content {
   font-family: "Encode Sans Semi Condensed", sans-serif;
   background-color: rgba(255, 246, 229, 0.4);
-  height: 600px;
-  width: 60rem;
+  height: 680px;
+  width: 80rem;
   margin-left: auto;
   border-radius: 20px;
   margin-right: auto;
@@ -145,7 +157,7 @@ a.hover:not(.navbar-profile-logo) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 30px;
   padding: 20px;
 }
 

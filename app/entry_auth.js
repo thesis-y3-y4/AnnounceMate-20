@@ -8,6 +8,10 @@ const msalConfig = {
     authority: "https://login.microsoftonline.com/caloocan.sti.edu.ph",
     redirectUri: "http://localhost:8080",
   },
+  cache: {
+    cacheLocation: "sessionStorage", // This configures where your cache will be stored
+    storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
+  },
 };
 
 const msalInstance = new msal.PublicClientApplication(msalConfig);
